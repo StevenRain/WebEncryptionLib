@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSA_Demo</title>
+
+    <script src="./RSALib/jsencrypt.min.js"></script>
+    <script src="./RSALib/RSA-API.js"></script>
+
+</head>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var btn = document.getElementById("btn");
+        var input  = document.getElementById("text1");
+        var output = document.getElementById("text2");
+
+        btn.onclick = function () {
+            output.value = encrypt( input.value);
+        }
+    }
+</script>
+
+<style>
+    .div1{
+        margin-top: 100px;
+        margin-left:25%;
+    }
+    span{
+        color:blue;
+    }
+</style>
+
+<body>
+    <div class="div1">
+        <span><h2>RSA加密测试</h2></span>
+        <label><h3>待加密的字符串</h3></label>
+        <textarea rows="15" cols="65" id="text1"></textarea>
+
+        <label><h3>加密后的字符串</h3></label>
+        <textarea rows="15"  cols="65" id="text2"></textarea>
+
+        <input type="button" id="btn" value="测试" style="width:40px; height: 20px; background-color: aliceblue">
+    </div>
+</body>
+</html>
